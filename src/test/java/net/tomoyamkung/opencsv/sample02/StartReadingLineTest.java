@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.List;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -27,6 +28,13 @@ public class StartReadingLineTest {
 						CSVParser.DEFAULT_SEPARATOR, // デフォルトのセパレータは「カンマ」
 		                CSVParser.DEFAULT_QUOTE_CHARACTER, // デフォルトの囲み文字はダブルクォート
 		                lineNumber); // 第4引数に、ファイルの読み込み開始行を指定する
+	}
+	
+	@After
+	public void tearDown() throws Exception {
+		if(sut != null) {
+			sut.close();
+		}
 	}
 
 	@Test

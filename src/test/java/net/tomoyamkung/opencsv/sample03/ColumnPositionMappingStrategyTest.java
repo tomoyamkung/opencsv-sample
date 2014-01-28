@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.List;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -27,6 +28,13 @@ public class ColumnPositionMappingStrategyTest {
 		reader = new InputStreamReader(
 				ColumnPositionMappingStrategyTest.class.getClassLoader().getResourceAsStream(
 						ColumnPositionMappingStrategyTest.class.getSimpleName() + ".csv"), "UTF-8");
+	}
+	
+	@After
+	public void tearDown() throws Exception {
+		if(reader != null) {
+			reader.close();
+		}
 	}
 	
 	@Test
