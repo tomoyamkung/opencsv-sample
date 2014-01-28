@@ -23,11 +23,10 @@ public class StartReadingLineTest {
 		
 		sut = new CSVReader(new InputStreamReader(
 				StartReadingLineTest.class.getClassLoader().getResourceAsStream(
-						StartReadingLineTest.class.getSimpleName() + ".csv"),
-						"UTF-8"),
-						CSVParser.DEFAULT_SEPARATOR,
-		                CSVParser.DEFAULT_QUOTE_CHARACTER,
-		                lineNumber);
+						StartReadingLineTest.class.getSimpleName() + ".csv"), "UTF-8"),
+						CSVParser.DEFAULT_SEPARATOR, // デフォルトのセパレータは「カンマ」
+		                CSVParser.DEFAULT_QUOTE_CHARACTER, // デフォルトの囲み文字はダブルクォート
+		                lineNumber); // 第4引数に、ファイルの読み込み開始行を指定する
 	}
 
 	@Test
