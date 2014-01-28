@@ -1,5 +1,13 @@
-package net.tomoyamkung.opencsv.sample03;
+package net.tomoyamkung.opencsv;
 
+/**
+ * 本を表すクラス。
+ * 
+ * CSV の内容をマッピングするためのクラス。
+ * 
+ * @author tomoyamkung
+ *
+ */
 public class Book {
 	
 	/**
